@@ -1,3 +1,0 @@
-# Portfolio Documentation
-
-## ## Technologies Used
