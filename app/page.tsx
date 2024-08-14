@@ -5,7 +5,7 @@ import Grid from "@/components/ui/BentoGrid/Grid";
 import Projects from "@/components/ui/Projects/Projects";
 import {ShootingStars} from "@/components/ui/Background/ShootingStars";
 import {StarsBackground} from "@/components/ui/Background/StarsBackground";
-
+import Exprience from "@/components/ui//Expricence/Exprience";
 
 export default function Home() {
   return (
@@ -23,6 +23,7 @@ export default function Home() {
         <Hero />
         <Grid />
         <Projects />
+        <Exprience />
 
 
         <ShootingStars  />

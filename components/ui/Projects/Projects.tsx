@@ -5,7 +5,7 @@ import { FaLocationArrow } from 'react-icons/fa'
 
 const Projects = () => {
     return (
-        <div className='pb-10'>
+        <div className='pb-10 ' id="projects">
             <h2 className='heading'>
                 <span className='text-violet-300'>Projects Outline</span>
             </h2>

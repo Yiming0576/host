@@ -113,7 +113,7 @@ export const projects = [
     id: 2,
     title: "Portfolio Website",
     des: "A portfolio website built with Next.js, Aceternity UI, Tailwind CSS, and TypeScript. ",
-    img: "/p2.svg",
+    img: "portfolio.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", ],
     link: "https://github.com/adrianhajdin/zoom-clone",
   },
