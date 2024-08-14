@@ -65,8 +65,8 @@ export const BentoGridItem = ({
 
   const handleCopy = () => {
     const text = personalInfo.email;
-    console.log({text: text}); // it does not even call this function when i click the button
-    
+    console.log({ text: text }); // it does not even call this function when i click the button
+
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -130,16 +130,20 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
-            {description}
-          </div>
-          {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
-          {/* remove mb-2 mt-2 */}
-          <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
-          >
-            {title}
+          <div className="flex flex-col">
+            {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
+            <div className=" font-writing font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+              {description}
+            </div>
+            {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
+            {/* remove mb-2 mt-2 */}
+            <div
+              className={`${id === 4 ? 'p-5' : id === 5 || id === 3 ? 'p-3' : (id === 1 ? 'p-20' : 'p-0')} font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            >
+              {title}
+            </div>
+
+
           </div>
 
           {/* for the github 3d globe */}
@@ -148,7 +152,7 @@ export const BentoGridItem = ({
           {/* Tech stack list div */}
           {id === 4 && (
             <div className="flex gap-4 lg:gap-7 w-fit absolute right-6 lg:-right-2">
-               {/* tech stack lists */}
+              {/* tech stack lists */}
               <div className="flex flex-col gap-3 md:gap-2 lg:gap-6">
                 {programmingLanguages.map((item, i) => (
                   <span
@@ -183,8 +187,8 @@ export const BentoGridItem = ({
                     {item}
                   </span>
                 ))}
-              </div> 
-                
+              </div>
+
             </div>
           )}
           {id === 6 && (

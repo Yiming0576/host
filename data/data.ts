@@ -1,11 +1,47 @@
-export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
-];
+// import { FaHome, FaUser, FaFolderOpen, FaBriefcase, FaEnvelope } from 'react-icons/fa';
+// import React from 'react'; // Import React if you're using TypeScript
 
-export const skills = [{ Languages: ["Python", "Java", "Typescript"], Frameworks: ["Next.JS", "React", "SpringBoot"], Tools: ["Bash", "Git", "Docker"], Databases: ["MongoDB", "PostgreSQL", "MySQL"] }];
+// interface NavItem {
+//   name: string;
+//   link: string;
+//   icon: React.ReactNode;
+// }
+// export const navItems: NavItem[]  = [
+//   {
+//     name: "Home",
+//     link: "#home",    
+//     icon: <FaHome className="w-6 h-6" />,
+//   },
+//   {
+//     name: "About",
+//     link: "#about",
+//     icon: <FaUser className="w-6 h-6" />,
+//   },
+//   {
+//     name: "Projects",
+//     link: "#projects",
+//     icon: <FaFolderOpen className="w-6 h-6" />,
+//   },
+//   {
+//     name: "Exprience",
+//     link: "#exprience",
+//     icon: <FaBriefcase className="w-6 h-6" />,
+//   },
+//   {
+//     name: "Contact",
+//     link: "#contact",
+//     icon: <FaEnvelope className="w-6 h-6" />,
+//   },
+// ];
+
+export const skills = [
+  {
+    Languages: ["Python", "Java", "Typescript"],
+    Frameworks: ["Next.JS", "React", "SpringBoot"],
+    Tools: ["Bash", "Git", "Docker"],
+    Databases: ["MongoDB", "PostgreSQL", "MySQL"],
+  },
+];
 
 export const personalInfo = {
   name: "Yiming",
@@ -40,8 +76,9 @@ export const personalInfo = {
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
+    title: "", // Enthusiastic about learning new technologies
+    description:
+      "I'm always looking for new technologies to learn and implement projects.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
@@ -50,8 +87,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
+    title: "", // I'm very flexible with time zone communications
+    description: "I'm very flexible with time zone communications",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2 lg:min-h-[30vh]",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -60,8 +97,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
+    title: "Tech Explorer",
+    description: "Tech enthusiast with a passion for development.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1 lg:min-h-[30vh]",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -72,7 +109,8 @@ export const gridItems = [
     id: 4,
     title: "My tech stack",
     description: "I constantly try to improve",
-    className: "lg:col-span-5 md:col-span-5 md:row-span-2 lg:min-h-[30vh] justify-center flex-1", 
+    className:
+      "lg:col-span-5 md:col-span-5 md:row-span-2 lg:min-h-[30vh] justify-center flex-1",
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -80,7 +118,7 @@ export const gridItems = [
   },
   {
     id: 5,
-    title: "Currently building an AI model integration",
+    title: "",  // Currently building an AI model integration
     description: "Integrating AI models into web applications",
     className: "md:col-span-2 md:row-span-2 ",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -106,7 +144,7 @@ export const projects = [
     title: "Automated Scripts to filtering data, run Gromacs simulations",
     des: "automated scripts using bash, sed, awk, and Python to filtering data and run GROMACS simulations.",
     img: "/vmd.svg",
-    iconLists: ["/py.svg", "/numpy.svg", "/bash.svg", "/awk.svg",],
+    iconLists: ["/py.svg", "/numpy.svg", "/bash.svg", "/awk.svg"],
     link: "https://github.com/Yiming0576/internship-ASRC",
   },
   {
@@ -114,7 +152,7 @@ export const projects = [
     title: "Portfolio Website",
     des: "A portfolio website built with Next.js, Aceternity UI, Tailwind CSS, and TypeScript. ",
     img: "portfolio.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", ],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "https://github.com/adrianhajdin/zoom-clone",
   },
   // {
@@ -133,39 +171,6 @@ export const projects = [
   //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
   //   link: "https://github.com/adrianhajdin/iphone",
   // },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
 ];
 
 export const companies = [
@@ -204,31 +209,17 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Nanoscience Research Assistant",
+    desc: "Created automated Bash and Python scripts for GROMACS simulations and data analysis, used VMD for 3D visualization, and applied supervised machine learning to predict outcomes.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Web Developer Intern",
+    desc: "Integrated various AI models into STEM education web applications using TypeScript and Next.js, developed RESTful APIs, and implemented MongoDB for data management.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
   },
 ];
 

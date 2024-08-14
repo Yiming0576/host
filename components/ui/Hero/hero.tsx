@@ -14,7 +14,7 @@ const ButtonProps: MagicButtonProps = {
 
 const hero = () => {
   return (
-    <div className="pt-36">
+    <div className="" id="home">
       {/* Spotlight Animations */}
       <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen " fill="white" />
       <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
@@ -28,7 +28,7 @@ const hero = () => {
         {/* Content */}
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <TextSection title="Universal World" description="I’m a Full-Stack Developer based in New York City" />
+          <TextSection title="Live as if you were to die tomorrow. Learn as if you were to live forever." description="I’m a Full-Stack Developer based in New York City" />
           <a href="#about" className="p-5">
             <HeroButton props={ButtonProps} />
           </a>

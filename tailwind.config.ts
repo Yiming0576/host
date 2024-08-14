@@ -3,6 +3,7 @@ import type { Config } from "tailwindcss";
 const svgToDataUri = require("mini-svg-data-uri");
 
 const colors = require("tailwindcss/colors");
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -22,10 +23,24 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
+        "xs": "480px",
         "2xl": "1400px",
       },
     },
     extend: {
+      fontFamily: {
+        writing: ["Indie Flower", "cursive"],
+        writing2: ["Edu AU VIC WA NT Hand", "cursive"],
+
+      },
+      screens: {
+      'xs': '480px', // Custom breakpoint for extra small screens
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
       colors: {
         black: {
           DEFAULT: "#000",

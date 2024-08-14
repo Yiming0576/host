@@ -24,7 +24,7 @@ const Exprience = () => {
                                 <h1 className='text-start text-xl md:text-2xl font-bold'>
                                     {exp.title}
                                 </h1>
-                                <p className='text-start text-white-100 mt-3 font-semibold'>
+                                <p className='text-start text-white-100 mt-3 font-semibold text-clamp-3 pr-1'>
                                     {exp.desc}
                                 </p>
                             </div>
