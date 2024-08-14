@@ -27,20 +27,22 @@ interface ShootingStarsProps {
 const getRandomStartPoint = () => {
   const side = Math.floor(Math.random() * 4);
   const offset = Math.random() * window.innerWidth;
+  const angleOffset = Math.random() * 90 - 45; // Random angle offset between -45 and 45 degrees
 
   switch (side) {
-    case 0:
-      return { x: offset, y: 0, angle: 45 };
-    case 1:
-      return { x: window.innerWidth, y: offset, angle: 135 };
-    case 2:
-      return { x: offset, y: window.innerHeight, angle: 225 };
-    case 3:
-      return { x: 0, y: offset, angle: 315 };
+    case 0: // Top side
+      return { x: offset, y: 0, angle: 45 + angleOffset };
+    case 1: // Right side
+      return { x: window.innerWidth, y: offset, angle: 135 + angleOffset };
+    case 2: // Bottom side
+      return { x: offset, y: window.innerHeight, angle: 225 + angleOffset };
+    case 3: // Left side
+      return { x: 0, y: offset, angle: 315 + angleOffset };
     default:
       return { x: 0, y: 0, angle: 45 };
   }
 };
+
 export const ShootingStars: React.FC<ShootingStarsProps> = ({
   minSpeed = 10,
   maxSpeed = 30,

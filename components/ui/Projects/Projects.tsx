@@ -1,7 +1,10 @@
+"use client";
+
 import React from 'react';
 import { projects } from '@/data/data';
 import { PinContainer } from '@/components/ui/Projects/PinContainer';
 import { FaLocationArrow } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Projects = () => {
     return (
@@ -14,10 +17,12 @@ const Projects = () => {
                     <div key={id} className='lg:min-h-[35.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]'>
                         <PinContainer title={link} href={link}>
                             <div className='relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh]'>
-                                <img src="/bg.png" alt='Background Image' />
-                                <img
+                                <Image src="/bg.png" alt='Background Image' height={400} width={400} />
+                                <Image
                                     src={img}
                                     alt={`${title} project image`}
+                                    width={400}
+                                    height={400}
                                     className='absolute z-10 bottom-0'
                                 />
                             </div>
@@ -37,7 +42,7 @@ const Projects = () => {
                                                 transform: `rotate(${index * 20}deg)`
                                             }}
                                         >
-                                            <img src={icon} alt={icon} className='p-2 rounded-sm' />
+                                            <Image src={icon} alt={icon} height={600}  width={600} className='p-2 rounded-sm' />
                                         </div>
                                     ))}
                                 </div>

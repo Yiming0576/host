@@ -28,30 +28,27 @@ interface StarBackgroundProps {
 export const StarsBackground: React.FC<StarBackgroundProps> = ({
   starDensity = 0.0015,
   allStarsTwinkle = true,
-  twinkleProbability = 0.7,
+  twinkleProbability = 100,
   minTwinkleSpeed = 0.5,
   maxTwinkleSpeed = 1,
   className,
 }) => {
   const [stars, setStars] = useState<StarProps[]>([]);
-  const canvasRef: RefObject<HTMLCanvasElement> =
-    useRef<HTMLCanvasElement>(null);
+  const canvasRef: RefObject<HTMLCanvasElement> = useRef<HTMLCanvasElement>(null);
 
   const generateStars = useCallback(
     (width: number, height: number): StarProps[] => {
       const area = width * height;
       const numStars = Math.floor(area * starDensity);
       return Array.from({ length: numStars }, () => {
-        const shouldTwinkle =
-          allStarsTwinkle || Math.random() < twinkleProbability;
+        const shouldTwinkle = allStarsTwinkle || Math.random() < twinkleProbability;
         return {
           x: Math.random() * width,
           y: Math.random() * height,
           radius: Math.random() * 0.05 + 0.5,
           opacity: Math.random() * 0.5 + 0.5,
           twinkleSpeed: shouldTwinkle
-            ? minTwinkleSpeed +
-              Math.random() * (maxTwinkleSpeed - minTwinkleSpeed)
+            ? minTwinkleSpeed + Math.random() * (maxTwinkleSpeed - minTwinkleSpeed)
             : null,
         };
       });
@@ -86,9 +83,12 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
       resizeObserver.observe(canvasRef.current);
     }
 
+    // Create a stable reference to canvasRef.current
+    const currentCanvas = canvasRef.current;
+
     return () => {
-      if (canvasRef.current) {
-        resizeObserver.unobserve(canvasRef.current);
+      if (currentCanvas) {
+        resizeObserver.unobserve(currentCanvas);
       }
     };
   }, [
@@ -139,7 +139,6 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
       ref={canvasRef}
       className={cn("h-full w-full absolute inset-0", className)}
       style={{ pointerEvents: 'none' }} // This line allows clicks to pass through
-
     />
   );
 };
