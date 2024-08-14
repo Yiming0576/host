@@ -118,6 +118,8 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
     <svg
       ref={svgRef}
       className={cn("w-full h-full absolute inset-0", className)}
+      style={{ pointerEvents: 'none' }} // Prevents clicks on this element
+
     >
       {star && (
         <rect

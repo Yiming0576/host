@@ -2,10 +2,11 @@
 import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "@/data/data";
-import ShimmerButton from "@/components/ui/Footer/ShimmerButton";
+
 
 const sendEmail = () => {
-    console.log("email sent"); // Log before redirect
+    console.log("Button clicked!"); // Check if this logs when button is clicked
+
     window.location.href = "mailto:Yiming0576@gmail.com";
 };
 
@@ -13,21 +14,12 @@ const ButtonData = {
     title: "Let's get in touch",
     icon: <FaLocationArrow />,
     position: "right",
-    handleClick: sendEmail, // Ensure it's correctly named
+    handleClick: sendEmail,
 };
 
 const Footer = () => {
     return (
-        <footer className="w-full pt-20 pb-3" id="contact">
-            {/* Background grid */}
-            <div className="w-full absolute left-0 -bottom-72 min-h-96">
-                <img
-                    src="/footer-grid.svg"
-                    alt="grid"
-                    className="w-full h-full opacity-50"
-                />
-            </div>
-
+        <footer className="w-full pt-20 pb-3 relative" id="contact">
             <div className="flex flex-col items-center">
                 <h1 className="heading lg:max-w-[45vw]">
                     Getting  to know <span className="text-purple">Me?</span> 
@@ -36,7 +28,21 @@ const Footer = () => {
                     Reach out to me today and let&apos;s discuss how we can work together to build something amazing.
                 </p>
 
-                <ShimmerButton {...ButtonData} />
+                {/* <ShimmerButton {...ButtonData} /> */}
+
+                {/* Button for sending email */}
+                <div 
+                    onClick={sendEmail} 
+                    className="inline-flex h-12 animate-shimmer rounded-full items-center justify-center border border-slate-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 "
+
+                >
+                    <span className="mr-2">{ButtonData.title}</span>
+                    {ButtonData.icon}
+
+                </div>
+
+                {/* Uncomment this line if you want to keep the ShimmerButton */}
+                {/* <ShimmerButton {...ButtonData} /> */}
             </div>
             <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
                 <p className="md:text-base text-sm md:font-normal font-light pb-4 sm:pb-4 xs:pb-2">

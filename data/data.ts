@@ -212,14 +212,14 @@ export const workExperience = [
     title: "Nanoscience Research Assistant",
     desc: "Created automated Bash and Python scripts for GROMACS simulations and data analysis, used VMD for 3D visualization, and applied supervised machine learning to predict outcomes.",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "/asrc.svg",
   },
   {
     id: 2,
     title: "Web Developer Intern",
     desc: "Integrated various AI models into STEM education web applications using TypeScript and Next.js, developed RESTful APIs, and implemented MongoDB for data management.",
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
+    thumbnail: "/it-services-llc.svg",
   },
 ];
 

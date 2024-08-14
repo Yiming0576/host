@@ -138,6 +138,8 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
     <canvas
       ref={canvasRef}
       className={cn("h-full w-full absolute inset-0", className)}
+      style={{ pointerEvents: 'none' }} // This line allows clicks to pass through
+
     />
   );
 };
