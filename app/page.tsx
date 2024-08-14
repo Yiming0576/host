@@ -6,6 +6,7 @@ import Projects from "@/components/ui/Projects/Projects";
 import {ShootingStars} from "@/components/ui/Background/ShootingStars";
 import {StarsBackground} from "@/components/ui/Background/StarsBackground";
 import Exprience from "@/components/ui//Expricence/Exprience";
+import Footer from "@/components/ui/Footer/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Grid />
         <Projects />
         <Exprience />
+        <Footer />
 
 
         <ShootingStars  />

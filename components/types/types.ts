@@ -1,5 +1,5 @@
 interface MagicButtonProps {
-  title: string;
+  title?: string;
   icon?: React.ReactNode;
   position?: string;
   otherClasses?: string;

@@ -1,6 +1,6 @@
 import { workExperience } from '@/data/data'
-import { button } from '@material-tailwind/react'
 import React from 'react'
+import { Button } from './MovingBorder'
 
 const Exprience = () => {
     return (
@@ -12,9 +12,23 @@ const Exprience = () => {
                 {
                     workExperience.map((exp, index) => (
 
-                        <button>
-                            
-                        </button>
+                        <Button
+                            key={exp.id}
+                            duration={Math.floor(Math.random() * 10000) + 10000}
+                            className='flex-1 text-white-100 border-neutral-100 dark:border-slate-700'
+                        >
+                            <div className='flex lg:flex-grow flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2'>
+                                <img src={exp.thumbnail} alt={exp.thumbnail} className='lg:w-32 md:w-20 w-16' />
+                            </div>
+                            <div className='lg:ms-5'>
+                                <h1 className='text-start text-xl md:text-2xl font-bold'>
+                                    {exp.title}
+                                </h1>
+                                <p className='text-start text-white-100 mt-3 font-semibold'>
+                                    {exp.desc}
+                                </p>
+                            </div>
+                        </Button>
 
                     ))
                 }
