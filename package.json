@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://Yiming0576.github.io/host",
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",

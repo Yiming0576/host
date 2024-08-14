@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    basePath: '/host',  // The subdirectory for your GitHub Pages site
-    assetPrefix: '/host/', // Ensure assets are loaded correctly from the same subdirectory
-  };
+  output: 'export',
+  basePath: '/host',  // Your GitHub repository name
+  assetPrefix: '/host/', // Your GitHub repository name
+  trailingSlash: true,
+  reactStrictMode: true,
+
+};
   
   export default nextConfig;
   
